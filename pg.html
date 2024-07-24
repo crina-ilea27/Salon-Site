@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Enchanté Luxe Beauty</title>
+</head>
+<body>
+
+    <!-- Pagina Principală -->
+    <div class="main-container">
+        <div class="background-image">
+            <div class="welcome-message"> 
+                <h1>Enchanté Luxe Beauty</h1>
+                <a class="bookingButton" id="bookingButton" href="#"  style="--color:#ffffff;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Programare Online
+                </a>
+            </div>
+        </div>
+   
+        <!-- Meniu de Navigare -->
+        <nav class="main-menu">
+            <ul class="navigation">
+                <span class="toggleMenu"></span>
+                <li><a href="#main-container">Acasa</a></li>
+                <li><a href="#servicii">Servicii</a></li>
+                <li><a href="#recenzii">Recenzii</a></li>
+                <li><a href="#desprenoi">Despre Noi</a></li>
+                <li><a href="#profil">Profil</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="servicii">
+    <!--Servicii-->
+    <div class="contentS">
+        <a href="epilat.html"><img id="waxing" src="pics/waxing.png" ></a>
+        <a href="tratamente.html"><img id="facial" src="pics/facial.png" ></a>
+        <a href="tuns.html"><img id="foarfece" src="pics/foarfeca.png" ></a>
+        <div class="contentS">
+            <div class="service-box">
+                <a href="tuns.html"><img id="foarfece2" src="pics/foarfeca.png" ></a>
+                <h3>Tunsori cu personalitate</h3>
+                <br>
+                <p>Noi oferim tunsori spectaculoase pentru gusturile fiecarui client.</p>
+            </div>
+            <div class="service-box">
+                <a href="tuns.html"><img id="foarfece2" src="pics/haircolor.png" ></a>
+                <h3>Vopsit</h3>
+                <br>
+                <p>Ai incredere sa ne lasi sa iti oferim culoarea la care visezi.</p>
+            </div>
+            <div class="service-box">
+                <a href="tuns.html"><img id="foarfece2" src="pics/hairwash22.png" ></a>
+                <h3>Spalat pe par</h3><br>
+                <p>Noi avem cele mai blânde tehnici si metode de spalat pe cap.</p>
+            </div>
+            <div class="service-box">
+                <a href="tratamente.html"><img id="foarfece2" src="pics/facial.png" ></a>
+                <h3>Tratamente de hidratare</h3><br>
+                <p>Iti garantam cele mai bune si eficiente metode de hidratare.</p>
+            </div>
+            <div class="service-box">
+                <a href="epilat.html"><img id="foarfece2" src="pics/waxing.png" ></a>
+                <h3>Epilare</h3><br>
+                <p>Orice fel de epilare iti doresti noi iti oferim cu drag.</p>
+            </div>
+            <div class="service-box">
+                <a href="tratamente.html"><img id="foarfece2" src="pics/blackheads.png" ></a>
+                <h3>Extractie cosuri</h3><br>
+                <p>Garantam cele mai bune extractii fara piele iritata.</p>
+            </div>
+        </div>
+    </div>
+
+   </section>
+        <!-- Rețele Sociale --> 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <div class="Pwrapper">
+          <div class="wrapper">
+                 <div class="button">
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                        <span>Facebook</span>
+                 </div>
+                <div class="button">
+                     <div class="icon">
+                          <i class="fab fa-twitter"></i>
+                     </div>
+                          <span>Twitter</span>
+               </div>
+              <div class="button">
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                   </div>
+                        <span>Instagram</span>
+               </div>
+              <div class="button">
+                    <div class="icon">
+                       <i class="fab fa-youtube"></i>
+                    </div>
+                       <span>YouTube</span>
+              </div>
+          </div>
+     </div>
+
+    <!-- Fereastra Modală -->
+    <div id="optionsModal" class="modal">
+        <div class="modal-content options-content">
+            <div class="options-buttons">
+                <button onclick="navigateToPage('tuns')"> 
+                    <img src="pics/haircut.png" alt="Tuns"> 
+                    <span>Păr</span>
+                </button>
+                <button onclick="navigateToPage('epilat')">
+                    <img src="pics/wax.png" alt="Epilat">
+                    <span>Epilat</span>
+                </button>
+                <button onclick="navigateToPage('tratamente')">
+                    <img src="pics/facialtr.png" alt="Tratamente"> 
+                    <span>Tratamente</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js.JS"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Utilizator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Playfair+Display:1,300,400,400italic,500,700,700italic,900');
+        *{
+            font-family: 'Playfair Display', sans-serif;
+        }
+        body {
+            margin: 80px;
+            padding: 20px;
+            background:url(pics/pexels2.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+           /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
+            
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            border: 10px dashed rgb(255, 0, 144);
+            background: rgba(255, 255, 255, 0.5); 
+        }
+        h2 {
+            text-align: center;
+            background: url(pics/back.png);
+            color: black;
+            font-size: 28px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="number"], input[type="password"] {
+            width: auto;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #eb2a8a;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: auto;
+        }
+        .avatar {
+            border: 1px solid black;
+            position: absolute;
+            top: 27%;
+            left: 778px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+}
+   /* BARA NAV */
+.main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: #ffffff;
+  transition: 0.5s;
+  box-shadow: 0 10px 15px rgba(34, 0, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition-delay: 0.5s;
+}
+
+.navigation.active {
+  width: 600px;
+}
+
+.navigation.active li {
+  transition-delay: 0.75s;
+  transform: scale(1);
+}
+
+.navigation.active .toggleMenu {
+  background: #000000;
+  transition-delay: 0s;
+  width: 30px;
+  height: 30px;
+  transform: translateY(60px);
+}
+
+.navigation.active .toggleMenu:before {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(0px) rotate(45deg) scale(0.6);
+  transition-delay: 0s;
+}
+
+.navigation.active .toggleMenu:after {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(0px) rotate(-45deg) scale(0.6);
+  transition-delay: 0s;
+}
+
+.navigation li {
+  list-style: none;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.navigation li a:hover {
+  background: #000000;
+  color: #fff;
+}
+
+.navigation .toggleMenu {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+  transition-delay: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation .toggleMenu:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(-5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigation .toggleMenu:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+ 
+    </style>
+
+</head>
+<body>
+        <nav class="main-menu">
+            <ul class="navigation">
+                <span class="toggleMenu"></span>
+                <li><a href="pg.php">Acasa</a></li>
+                <li><a href="pg.php">Servicii</a></li>
+                <li><a href="pg.php">Recenzii</a></li>
+                <li><a href="pg.php">Despre Noi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+        </nav><br>
+       <div class="container">
+        <h2>Profil Utilizator</h2>
+        <form action="profile.php" method="post" enctype="multipart/form-data">
+            <div class="avatar" id="avatar">
+            </div>
+            <label>Poza de profil</label>
+            <input type="file" name="poza_profil" accept="image/*" placeholder="Încărcați o poză de profil"><br><br>
+            <input type="number" name="varsta" placeholder="Vârstă" required>
+            <input type="date" name="data_nasterii" placeholder="Data nașterii" required><br><br>
+            <input type="tel" name="telefon" placeholder="Număr de telefon" required><br><br>
+            <input type="password" name="parola_noua" placeholder="Parolă nouă"><br>
+            <input type="submit" value="Salvează">
+        </form>
+    </div>
+    <script>
+        document.querySelector('.toggleMenu').addEventListener('click', () => {
+        document.querySelector('.navigation').classList.toggle('active')
+})
+function previewImage(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var avatarPreview = document.getElementById('avatar');
+            avatarPreview.innerHTML = '<img src="' + e.target.result + '" alt="Avatar">';
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+    </script> 
+</body>
+</html>
